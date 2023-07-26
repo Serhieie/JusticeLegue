@@ -199,10 +199,51 @@ footer {
   background-color: var(--white);
 }
 
-@media screen and (min-width: 749px) {
+.mobile-menu-button {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 1109px) {
+.mobile-menu-button svg {
+  stroke: var(--white);
+  fill: var(--white);
+  opacity: 0.5;
+}
+
+.mobile-menu-button:focus svg,
+.mobile-menu-button:hover svg {
+  opacity: 1;
+}
+
+@media screen and (min-width: 767px) {
+  .mobile-menu-button {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-menu-button svg {
+    width: 23px;
+    height: 16px;
+  }
+
+  .nav-list {
+    gap: 20Fpx;
+  }
+  .search-ring-log-in {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1156px) {
+  .mobile-menu-button {
+    display: none;
+  }
+  .search-ring-log-in {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1439px) {
@@ -461,30 +502,37 @@ footer {
     align-items: center;
     margin: 0 auto;
   }
-  .item-three ~ li {
-    display: none;
-  }
 
   .tvs-movies-imgs {
     width: 288px;
     height: 427px;
   }
-}
-
-@media screen and (min-width: 767px) {
-  .item-four ~ li {
+  .item-three ~ li {
     display: none;
   }
 }
 
+@media screen and (min-width: 767px) {
+  .item-three ~ li {
+    display: none;
+  }
+
+  .nav-list {
+    margin-left: 40px;
+  }
+}
+
 @media screen and (min-width: 1156px) {
+  .item-three ~ li {
+    display: block;
+  }
   .item-four ~ li {
     display: none;
   }
 }
 @media screen and (min-width: 1440px) {
-  .item-four ~ li {
-    display: contents;
+  .item-three ~ li {
+    display: block;
   }
 }
 
@@ -684,7 +732,7 @@ footer {
     display: none;
   }
 
-  register-section {
+  .register-section {
     width: 100%;
   }
 }
@@ -921,6 +969,10 @@ footer {
     height: 80px;
     font-size: 20px;
   }
+
+  .tranding-button {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (min-width: 749px) {
@@ -994,6 +1046,9 @@ footer {
     gap: 10px;
     flex-wrap: nowrap;
   }
+  .coming-soon-div {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1439px) {
@@ -1038,5 +1093,10 @@ footer {
     justify-content: center;
     gap: 40px;
     flex-wrap: nowrap;
+  }
+
+  .coming-soon-section {
+    justify-content: center;
+    align-items: center;
   }
 }
