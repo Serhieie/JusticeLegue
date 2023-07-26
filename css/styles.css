@@ -643,12 +643,24 @@ footer {
 
 .actors-page-link {
 }
+
 .actors-list-items {
+  display: flex;
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
 }
 .actor-link {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  gap: 30px;
+
+  font-weight: 700;
+  line-height: 1.11;
 }
 
 .actor-five {
@@ -662,6 +674,7 @@ footer {
 }
 
 .coming-soon-movie-link img {
+  padding-bottom: 20px;
   display: block;
   margin: 0 auto;
   border-top-left-radius: 20px;
