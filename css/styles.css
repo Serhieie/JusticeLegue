@@ -821,9 +821,11 @@ footer {
   .coming-soon-movie-link img {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     width: 675px;
     height: 336px;
+    padding: 0;
+    margin: 0;
   }
 
   .coming-soon-p {
