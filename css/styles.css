@@ -12,6 +12,10 @@ font-family: 'Poppins', sans-serif; */
   --gradient: linear-gradient(352deg, #326cff 0%, #26fff2 100%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -78,6 +82,7 @@ footer {
   line-height: 0.71;
   margin-left: 25px;
   margin-bottom: 48px;
+  transition: color 250ms linear;
 }
 
 .all-h3::before {
@@ -92,11 +97,12 @@ footer {
   border-radius: 4px;
   background-color: #0d1a73;
   background-image: var(--gradient);
+  transition: opacity 250ms linear;
 }
 
-.all-h3::before:focus,
-.all-h3::before:hover {
-  rotate: 360deg;
+.all-h3:focus::before,
+.all-h3:hover::before {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 427px) {
@@ -189,6 +195,7 @@ footer {
   border-radius: 2px;
   background: linear-gradient(352deg, #326cff 0%, #26fff2 100%);
   background-color: var(--white);
+  transition: opacity 250ms linear;
 }
 
 .nav-link:hover::after {
@@ -343,6 +350,7 @@ footer {
 .hero-link-1,
 .hero-link-2 {
   padding: 15px 30px;
+  background-image: none;
   background-color: var(--white);
   color: var(--dark-text);
   border-radius: 40px;
@@ -352,7 +360,8 @@ footer {
   margin: 0;
   padding: 0;
 
-  transition: background-color 250ms linear, color 250ms linear;
+  transition: background-color 150ms linear, color 150ms linear,
+    background-image 250ms linear;
 }
 
 .hero-link-1 {
