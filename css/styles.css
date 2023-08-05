@@ -153,8 +153,9 @@ footer {
 
   width: 70px;
   height: 70px;
-
-  border: 4px solid #26fff2;
+  background: linear-gradient(var(--black), var(--black)) padding-box,
+    linear-gradient(352deg, #326cff 0%, #26fff2 100%) border-box;
+  border: 4px solid transparent;
   transition: border 0.3s ease-in-out;
   box-sizing: border-box;
   margin-right: 14px;
@@ -176,6 +177,24 @@ footer {
   transition: opacity 250ms linear;
 }
 
+.nav-link:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+
+  border-radius: 2px;
+  background: linear-gradient(352deg, #326cff 0%, #26fff2 100%);
+  background-color: var(--white);
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
 .nav-link:is(:focus, :hover) {
   opacity: 1;
 }
@@ -188,14 +207,14 @@ footer {
 .current:after {
   content: "";
   position: absolute;
-
+  opacity: 1;
   bottom: 1px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
 
   border-radius: 2px;
-
+  background: linear-gradient(352deg, #326cff 0%, #26fff2 100%);
   background-color: var(--white);
 }
 
